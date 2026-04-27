@@ -377,20 +377,21 @@ li {
 
 .skills h1 {
   text-transform: uppercase;
-  letter-spacing: 2.5px;
+  letter-spacing: 2.2px;
   margin: 2rem -2px 2rem 0;
 }
 
 .skills > p {
   font-size: 1.6rem;
   line-height: 1.6;
+  letter-spacing: .5px;
 }
 
 .icon-container {
   width: 9rem;
   height: 9rem;
   border: 3px solid #fbbf24;
-background-color: #1e3a5f;
+background-color: #142a45;
   margin-bottom: 2rem;
   display: flex;
   transform: rotate(45deg);
@@ -402,7 +403,7 @@ background-color: #1e3a5f;
 }
 
 .icon-container i {
-  color: #d5cded;
+  color: #ddd7ed;
   font-size: 3.6rem;
   margin: auto;
   transform: rotate(-45deg);
