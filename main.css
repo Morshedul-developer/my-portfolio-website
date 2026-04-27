@@ -355,7 +355,7 @@ li {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 4.5rem;
   text-align: center;
 }
 
@@ -373,6 +373,7 @@ li {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.04);
 }
 
 .skills h1 {
