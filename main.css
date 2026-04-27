@@ -301,6 +301,13 @@ li {
   opacity: 0.9;
 }
 
+.about-des{
+    font-size: 16px;
+    font-weight: 300; 
+    line-height: 1.8; 
+    color: #d2e1f4;
+}
+
 .profile-img {
   flex: 1;
   margin-right: 5rem;
