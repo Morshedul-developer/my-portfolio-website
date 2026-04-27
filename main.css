@@ -274,13 +274,13 @@ li {
   justify-content: center;
 }
 
-#my-image { width: 350px;
+#my-image {
+  width: 350px;
   border-radius: 20px;
   padding: 10px 20px 0 20px;
 
   /* Portfolio look - soft premium shadow */
-  box-shadow: 0 18px 35px rgba(255, 255, 255, 0.10);
-
+  box-shadow: 0 18px 35px rgba(255, 255, 255, 0.1);
 }
 
 .about-heading {
@@ -301,11 +301,11 @@ li {
   opacity: 0.9;
 }
 
-.about-des{
-    font-size: 16px;
-    font-weight: 300; 
-    line-height: 1.8; 
-    color: #d2e1f4;
+.about-des {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #d2e1f4;
 }
 
 .profile-img {
@@ -351,31 +351,46 @@ li {
 /*Start services*/
 .my-skills {
   margin-top: 10rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
   text-align: center;
 }
 
 .skills {
+  max-width: 350px;
+  height: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .skills h1 {
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   margin: 2rem -2px 2rem 0;
+}
+
+.skills > p {
+  font-size: 1.6rem;
+  line-height: 1.6;
 }
 
 .icon-container {
   width: 9rem;
   height: 9rem;
-  border: 3px solid #ffe839;
-  background-color: #fd57bf;
+  border: 3px solid #fbbf24;
+background-color: #1e3a5f;
   margin-bottom: 2rem;
   display: flex;
   transform: rotate(45deg);
@@ -383,11 +398,12 @@ li {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
+  margin-bottom: 3rem;
 }
 
 .icon-container i {
-  color: #ffe839;
-  font-size: 4rem;
+  color: #d5cded;
+  font-size: 3.6rem;
   margin: auto;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
