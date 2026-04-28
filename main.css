@@ -685,78 +685,247 @@ form {
 }
 
 form label {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.6rem;
+  display: block;
+  letter-spacing: 0.03em;
 }
 
 input,
 select,
 textarea {
   width: 100%;
-  padding: 1rem;
-  margin-bottom: 5px;
-  border: none;
-  outline-color: #fd57bf;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-size: 1.4rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  -webkit-transition: border-color 0.3s ease;
+  -moz-transition: border-color 0.3s ease;
+  -ms-transition: border-color 0.3s ease;
+  -o-transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #67e8f9;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 1.4rem;
+}
+
+select {
+  cursor: pointer;
+}
+
+select option {
+  background-color: #221e3f;
+  color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 160px;
 }
 
 input[type="submit"] {
   width: initial;
-  background-color: #fd57bf;
-  color: #eee;
-  padding: 1rem 2rem;
-  border-radius: 0.8rem;
-  -webkit-border-radius: 0.8rem;
-  -moz-border-radius: 0.8rem;
-  -ms-border-radius: 0.8rem;
-  -o-border-radius: 0.8rem;
+  background: linear-gradient(to right, #3b0fa8, #67e8f9);
+  color: #fff;
+  padding: 1.2rem 3.5rem;
+  border: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
   cursor: pointer;
-  transition: background-color 650ms;
-  -webkit-transition: background-color 650ms;
-  -moz-transition: background-color 650ms;
-  -ms-transition: background-color 650ms;
-  -o-transition: background-color 650ms;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  -webkit-transition: opacity 0.3s ease, transform 0.3s ease;
+  -moz-transition: opacity 0.3s ease, transform 0.3s ease;
+  -ms-transition: opacity 0.3s ease, transform 0.3s ease;
+  -o-transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 input[type="submit"]:hover {
-  color: #221e3f;
-  background-color: #ffe839;
+  opacity: 0.85;
+  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
 }
 /*End contact*/
 
 /*Start footer*/
-.copyright {
-  width: 100%;
-  text-align: center;
+.footer {
   background-color: #16162d;
-  padding: 2rem 0;
-  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 6rem;
+}
+
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-brand h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #3b0fa8, #67e8f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.2rem;
+}
+
+.footer-brand p {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.7;
+  max-width: 280px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #67e8f9;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer-links ul li a {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #67e8f9;
+}
+
+.footer-contact a {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+  transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #67e8f9;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer-socials a {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.4rem;
+  text-decoration: none;
+  margin-bottom: 0;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  border-color: #67e8f9;
+  color: #67e8f9;
+  transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
+}
+
+.footer-bottom {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-bottom p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .up {
-  position: absolute;
-  width: 5rem;
-  height: 5rem;
-  background-color: #eee;
-  top: -2.5rem;
-  right: 5rem;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: linear-gradient(to top, #3b0fa8, #67e8f9);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   display: flex;
+  cursor: pointer;
   animation: pulse 2s infinite;
   -webkit-animation: pulse 2s infinite;
-  cursor: pointer;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+}
+
+.up:hover {
+  transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
 }
 
 .up i {
-  color: #16162d;
-  font-size: 2rem;
+  color: #fff;
+  font-size: 1.8rem;
   margin: auto;
-}
-
-.copyright p {
-  font-size: 1.4rem;
 }
 /*End footer*/
 
