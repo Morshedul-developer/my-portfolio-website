@@ -50,7 +50,7 @@
       <div class="landing-text">
         <h1>Morshedul Khaer</h1>
         <h6>
-          Frontend Developer | Web Developer | E-commerce Solutions Specialist
+          <span id="element"></span>
         </h6>
       </div>
     </header>
@@ -186,11 +186,7 @@
           <h6>View some of my recent works</h6>
         </div>
         <div class="portfolio-item">
-          <div
-            class="portfolio-img"
-            data-aos="fade-right"
-            data-aos-delay="300"
-          >
+          <div class="portfolio-img" data-aos="fade-right" data-aos-delay="300">
             <div class="browser-mockup">
               <div class="browser-bar">
                 <div class="browser-dots">
@@ -234,11 +230,7 @@
           </div>
         </div>
         <div class="portfolio-item">
-          <div
-            class="portfolio-img"
-            data-aos="fade-right"
-            data-aos-delay="300"
-          >
+          <div class="portfolio-img" data-aos="fade-right" data-aos-delay="300">
             <div class="browser-mockup">
               <div class="browser-bar">
                 <div class="browser-dots">
@@ -269,7 +261,12 @@
               backend framework.
             </p>
             <div class="portfolio-buttons">
-              <a href="https://issue-tracker-bd-01.netlify.app/" target="_blank" class="cta">Live Demo</a>
+              <a
+                href="https://issue-tracker-bd-01.netlify.app/"
+                target="_blank"
+                class="cta"
+                >Live Demo</a
+              >
               <a
                 href="https://github.com/Morshedul-developer/issue-tracker"
                 target="_blank"
@@ -390,6 +387,15 @@
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script>
+      var typed6 = new Typed("#element", {
+        strings: ["Frontend Developer | Web Developer | E-commerce Solutions Specialist"],
+        typeSpeed: 40,
+        backSpeed: 40,
+        loop: true,
+      });
+    </script>
     <script src="main.js"></script>
   </body>
 </html>
