@@ -385,14 +385,14 @@ li {
 .skills > p {
   font-size: 1.6rem;
   line-height: 1.6;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .icon-container {
   width: 9rem;
   height: 9rem;
   border: 3px solid #fbbf24;
-background-color: #142a45;
+  background-color: #142a45;
   margin-bottom: 2rem;
   display: flex;
   transform: rotate(45deg);
@@ -435,34 +435,120 @@ background-color: #142a45;
   flex: 1;
 }
 
+.browser-mockup {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.browser-bar {
+  background: #1a2035;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.browser-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.browser-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.browser-dots span:nth-child(1) {
+  background: #ff5f57;
+}
+.browser-dots span:nth-child(2) {
+  background: #ffbd2e;
+}
+.browser-dots span:nth-child(3) {
+  background: #28c840;
+}
+
+.browser-url {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.browser-content img {
+  width: 100%;
+  display: block;
+}
+
+.portfolio-item h6 {
+  font-size: 13px;
+  color: #00e0fe;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 .portfolio-des h1 {
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 500;
   margin: 1rem 0;
 }
 
-.portfolio-des h6 {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  opacity: 0.3;
+.portfolio-des p{
+    font-size: 1.5rem;
+    line-height: 1.6;
 }
 
-.portfolio-des .cta {
-  display: inline-block;
-  margin-top: 2.5rem;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  color: #3883ff;
-  transition: color 650ms;
-  -webkit-transition: color 650ms;
-  -moz-transition: color 650ms;
-  -ms-transition: color 650ms;
-  -o-transition: color 650ms;
+.project-number {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: rgba(99, 102, 241, 0.2);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
-.portfolio-des .cta:hover {
-  color: #2f67cd;
+
+
+.portfolio-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.cta-outline {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.cta-outline:hover {
+  border-color: #6366f1;
+  color: #6366f1;
 }
 /*End services*/
 
