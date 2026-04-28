@@ -493,7 +493,7 @@ li {
 
 .portfolio-item h6 {
   font-size: 13px;
-  color: #00e0fe;
+  color: #1dcde4;
   letter-spacing: 0.08em;
   margin-bottom: 0.75rem;
   font-weight: 500;
@@ -508,7 +508,8 @@ li {
 
 .portfolio-des p{
     font-size: 1.5rem;
-    line-height: 1.6;
+    line-height: 1.5;
+    text-align: justify;
 }
 
 .project-number {
@@ -525,8 +526,23 @@ li {
 .portfolio-buttons {
   display: flex;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   align-items: center;
+}
+
+.cta{
+    font-size: 1.1rem;
+}
+
+.cta:hover {
+  background: transparent;
+  color: #67e8f9;
+  border: 1px solid #67e8f9;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .cta-outline {
