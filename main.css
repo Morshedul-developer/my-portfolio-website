@@ -259,8 +259,10 @@ li {
 }
 
 .landing-text h6 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 400;
+  color: #3dcadd;
+  letter-spacing: 0.02em;
 }
 /*End header*/
 
