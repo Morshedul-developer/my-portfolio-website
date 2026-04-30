@@ -1049,7 +1049,7 @@ input[type="submit"]:hover {
     }
 
     .portfolio-item {
-      flex-direction: column;
+      flex-direction: column!important;
     }
 
     .portfolio-img {
