@@ -256,6 +256,8 @@ li {
   -webkit-text-fill-color: transparent;
   padding: 1rem;
   user-select: none;
+  filter: drop-shadow(0px 0px 25px rgba(59, 15, 168, 0.6));
+  -webkit-filter: drop-shadow(0px 0px 25px rgba(59, 15, 168, 0.6));
 }
 
 .landing-text h6 {
@@ -902,23 +904,15 @@ input[type="submit"]:hover {
   padding: 2.5rem 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.copyright-p {
+.footer-bottom p {
   font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.40);
-  text-align: center;
-}
-
-.ft{
-    position: relative;
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .up {
-  position: absolute;
-  bottom: 1.9rem;
-  right: 4rem;
   width: 4.5rem;
   height: 4.5rem;
   background: linear-gradient(to top, #3b0fa8, #67e8f9);
@@ -933,7 +927,6 @@ input[type="submit"]:hover {
   -webkit-animation: pulse 2s infinite;
   transition: transform 0.3s ease;
   -webkit-transition: transform 0.3s ease;
-  z-index: 999;
 }
 
 .up:hover {
