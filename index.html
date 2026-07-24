@@ -3,24 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Morshedul Khaer</title>
+    <title>Morshedul Khaer | Full-Stack Web Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Morshedul Khaer, a Full-Stack Web Developer building modern, AI-driven web applications with Next.js, React, Node.js, Express, and MongoDB."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Morshedul Khaer | Full-Stack Web Developer" />
+    <meta
+      property="og:description"
+      content="Portfolio of Morshedul Khaer, a Full-Stack Web Developer building modern, AI-driven web applications with Next.js, React, Node.js, Express, and MongoDB."
+    />
+    <meta property="og:image" content="images/img-4.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
+    <!-- Desktop/Tablet Navbar -->
+    <nav class="site-nav" id="site-nav">
+      <div class="site-nav-inner">
+        <a href="index.html" class="site-nav-brand">Morshedul Khaer</a>
+        <ul class="site-nav-list">
+          <li><a href="#about" class="site-nav-link">About</a></li>
+          <li><a href="#services" class="site-nav-link">Services</a></li>
+          <li><a href="#skills" class="site-nav-link">Skills</a></li>
+          <li><a href="#education" class="site-nav-link">Education</a></li>
+          <li><a href="#portfolio" class="site-nav-link">Portfolio</a></li>
+          <li><a href="#achievements" class="site-nav-link">Achievements</a></li>
+          <li><a href="#contact" class="site-nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <!-- Header -->
     <header>
-      <div class="menu-toggler">
+      <div class="menu-toggler" role="button" aria-label="Toggle navigation menu" tabindex="0">
         <div class="bar half start"></div>
         <div class="bar"></div>
         <div class="bar half end"></div>
@@ -37,70 +68,135 @@
             <a href="#services" class="nav-link">Services</a>
           </li>
           <li>
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li>
+            <a href="#education" class="nav-link">Education</a>
+          </li>
+          <li>
             <a href="#portfolio" class="nav-link">Portfolio</a>
           </li>
           <li>
-            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#achievements" class="nav-link">Achievements</a>
           </li>
           <li>
             <a href="#contact" class="nav-link">Contact</a>
           </li>
         </ul>
       </nav>
-      <div class="landing-text">
-        <h1>Morshedul Khaer</h1>
-        <h6>
-          <span id="element"></span>
-        </h6>
+      <div class="hero-inner">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+          <h1 class="hero-name">Morshedul Khaer</h1>
+          <p class="hero-role">
+            <span id="element">MERN Stack Developer</span>
+          </p>
+          <p class="hero-intro">
+            I build modern, production-ready web applications with Next.js,
+            React, Node.js, and MongoDB — and increasingly weave AI-powered
+            tools into the way I ship them.
+          </p>
+          <p class="hero-meta">
+            <i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh
+            <span class="hero-meta-sep">&middot;</span>
+            <span class="hero-meta-status">
+              <span class="status-dot"></span> Open to opportunities
+            </span>
+          </p>
+          <div class="hero-cta">
+            <a href="#portfolio" class="hero-btn-primary">View My Work</a>
+            <a
+              href="#"
+              class="hero-btn-secondary"
+              aria-disabled="true"
+              title="Resume coming soon"
+              onclick="return false;"
+            >
+              <i class="fa-solid fa-file-arrow-down"></i> Resume
+              <span class="resume-btn-badge">Coming Soon</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-photo" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+          <img
+            src="images/img-4.png"
+            alt="Morshedul Khaer, Full-Stack Web Developer, professional headshot"
+          />
+        </div>
       </div>
     </header>
 
     <!-- About Section -->
     <section class="about" id="about">
       <div class="container">
-        <div class="profile-img" data-aos="fade-right" data-aos-delay="300">
-          <img id="my-image" src="images/img-4.png" alt="My Profile Picture" />
-        </div>
-        <div class="about-details" data-aos="fade-left" data-aos-delay="600">
+        <div class="about-details" data-aos="fade-up" data-aos-delay="300">
           <div class="about-heading">
             <h1>About</h1>
             <h6>Myself</h6>
           </div>
           <p class="about-des">
-            Full-Stack Web Developer with hands-on experience building modern,
-            production-ready web applications using Next.js, React, Node.js, and
-            MongoDB. Skilled in crafting clean, responsive interfaces with
-            Tailwind CSS, HeroUI, and DaisyUI — while also implementing secure
-            authentication with Better Auth and RESTful APIs with Express.js.
-            I actively integrate AI-powered tools like Claude, ChatGPT, and
-            Gemini into my development workflow to ship faster and smarter.
-            Always learning, always building.
+            I'm a Full-Stack Web Developer who started with plain HTML, CSS,
+            and JavaScript in 2024 and has since worked up to shipping
+            production-ready apps with Next.js, React, Node.js, Express.js,
+            and MongoDB. I'm most drawn to the messy middle of a project —
+            wiring authentication (Better Auth), untangling a hydration bug,
+            or getting a same-origin cookie to actually work across two
+            deployed domains — the kind of problem that only gets solved by
+            reading the actual error, not guessing. I also fold AI tools like
+            Claude, ChatGPT, and Gemini directly into my workflow to move
+            faster without cutting corners on the code I ship.
+          </p>
+          <p class="about-des">
+            Away from the keyboard, I keep pigeons (কবুতর পালা) — there's
+            something grounding about a hobby with no console output — and
+            I'm usually a few chapters into a book. Both remind me to slow
+            down, which turns out to be useful advice for debugging too.
           </p>
           <div class="social-media">
             <ul class="nav-list">
               <li>
                 <a
-                  href="https://www.facebook.com/nijhum.khandoker"
+                  href="https://github.com/Morshedul-developer"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="icon-link"
+                  title="GitHub"
+                  aria-label="GitHub"
                 >
-                  <i class="fab fa-facebook-square"></i>
+                  <i class="fa-brands fa-github"></i>
                 </a>
               </li>
               <li>
                 <a
                   href="https://www.linkedin.com/in/morshedulkhaer/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="icon-link"
+                  title="LinkedIn"
+                  aria-label="LinkedIn"
                 >
                   <i class="fa-brands fa-linkedin"></i>
                 </a>
               </li>
               <li>
                 <a
+                  href="https://www.facebook.com/nijhum.khandoker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon-link"
+                  title="Facebook"
+                  aria-label="Facebook"
+                >
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://dribbble.com/morshedul-khaer"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="icon-link"
+                  title="Dribbble"
+                  aria-label="Dribbble"
                 >
                   <i class="fab fa-dribbble-square"></i>
                 </a>
@@ -109,7 +205,10 @@
                 <a
                   href="https://x.com/Morshedul2152"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="icon-link"
+                  title="Twitter/X"
+                  aria-label="Twitter/X"
                 >
                   <i class="fab fa-twitter-square"></i>
                 </a>
@@ -128,27 +227,7 @@
           <h6>What I can do for you</h6>
         </div>
         <div class="my-skills">
-          <div class="skills" data-aos="fade-in" data-aos-delay="300">
-            <div class="icon-container">
-              <i class="fa-solid fa-display"></i>
-            </div>
-            <h1>Responsive Web<br />Design</h1>
-            <p>
-              Crafting pixel-perfect, mobile-first interfaces using HTML, CSS,
-              and Tailwind CSS that look great on every screen size.
-            </p>
-          </div>
-          <div class="skills" data-aos="fade-in" data-aos-delay="600">
-            <div class="icon-container">
-              <i class="fa-solid fa-layer-group"></i>
-            </div>
-            <h1>Interactive UI Development</h1>
-            <p>
-              Building dynamic, component-based user interfaces with React.js -
-              focused on clean code, reusability, and smooth user experience.
-            </p>
-          </div>
-          <div class="skills" data-aos="fade-in" data-aos-delay="900">
+          <div class="skills" data-aos="fade-up" data-aos-delay="300">
             <div class="icon-container">
               <i class="fa-solid fa-rocket"></i>
             </div>
@@ -159,7 +238,7 @@
               scalability.
             </p>
           </div>
-          <div class="skills" data-aos="fade-in" data-aos-delay="950">
+          <div class="skills" data-aos="fade-up" data-aos-delay="450">
             <div class="icon-container">
               <i class="fa-solid fa-server"></i>
             </div>
@@ -170,7 +249,27 @@
               using Better Auth.
             </p>
           </div>
-          <div class="skills" data-aos="fade-in" data-aos-delay="1200">
+          <div class="skills" data-aos="fade-up" data-aos-delay="600">
+            <div class="icon-container">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h1>Interactive UI Development</h1>
+            <p>
+              Building dynamic, component-based user interfaces with React.js -
+              focused on clean code, reusability, and smooth user experience.
+            </p>
+          </div>
+          <div class="skills" data-aos="fade-up" data-aos-delay="750">
+            <div class="icon-container">
+              <i class="fa-solid fa-display"></i>
+            </div>
+            <h1>Responsive Web<br />Design</h1>
+            <p>
+              Crafting pixel-perfect, mobile-first interfaces using HTML, CSS,
+              and Tailwind CSS that look great on every screen size.
+            </p>
+          </div>
+          <div class="skills" data-aos="fade-up" data-aos-delay="900">
             <div class="icon-container">
               <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
@@ -185,6 +284,146 @@
       </div>
     </section>
 
+    <!-- Skills Section -->
+    <section class="tech-skills" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Skills</h1>
+          <h6>Technologies I work with</h6>
+        </div>
+        <div class="skill-groups">
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="300">
+            <h3><i class="fa-solid fa-laptop-code"></i> Frontend</h3>
+            <ul class="skill-tile-grid">
+              <li class="skill-tile skill-tile--primary">
+                <div class="skill-tile-top"><i class="fa-brands fa-react"></i> <span>React</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              </li>
+              <li class="skill-tile skill-tile--primary">
+                <div class="skill-tile-top"><i class="fa-solid fa-n"></i> <span>Next.js</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              </li>
+              <li class="skill-tile skill-tile--primary">
+                <div class="skill-tile-top"><i class="fa-solid fa-wind"></i> <span>Tailwind CSS</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              </li>
+              <li class="skill-tile">
+                <div class="skill-tile-top"><i class="fa-brands fa-html5"></i> <span>HTML5</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              </li>
+              <li class="skill-tile">
+                <div class="skill-tile-top"><i class="fa-brands fa-css3-alt"></i> <span>CSS3</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              </li>
+              <li class="skill-tile">
+                <div class="skill-tile-top"><i class="fa-brands fa-js"></i> <span>JavaScript</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              </li>
+              <li class="skill-tile">
+                <div class="skill-tile-top"><i class="fa-solid fa-code"></i> <span>TypeScript</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span></div>
+              </li>
+              <li class="skill-tile">
+                <div class="skill-tile-top"><i class="fa-solid fa-palette"></i> <span>HeroUI / DaisyUI</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+              </li>
+            </ul>
+          </div>
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="450">
+            <h3><i class="fa-solid fa-database"></i> Backend</h3>
+            <ul class="skill-tile-grid">
+              <li class="skill-tile skill-tile--primary">
+                <div class="skill-tile-top"><i class="fa-brands fa-node-js"></i> <span>Node.js</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              </li>
+              <li class="skill-tile skill-tile--primary">
+                <div class="skill-tile-top"><i class="fa-solid fa-server"></i> <span>Express.js</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              </li>
+              <li class="skill-tile">
+                <div class="skill-tile-top"><i class="fa-solid fa-leaf"></i> <span>MongoDB</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+              </li>
+              <li class="skill-tile">
+                <div class="skill-tile-top"><i class="fa-solid fa-lock"></i> <span>Better Auth</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+              </li>
+              <li class="skill-tile skill-tile--primary">
+                <div class="skill-tile-top"><i class="fa-solid fa-diagram-project"></i> <span>REST APIs</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              </li>
+            </ul>
+          </div>
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="600">
+            <h3><i class="fa-solid fa-toolbox"></i> Tools</h3>
+            <ul class="skill-tile-grid">
+              <li class="skill-tile">
+                <div class="skill-tile-top"><i class="fa-brands fa-git-alt"></i> <span>Git</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              </li>
+              <li class="skill-tile">
+                <div class="skill-tile-top"><i class="fa-brands fa-github"></i> <span>GitHub</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              </li>
+              <li class="skill-tile">
+                <div class="skill-tile-top"><i class="fa-solid fa-bolt"></i> <span>Vite</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+              </li>
+              <li class="skill-tile">
+                <div class="skill-tile-top"><i class="fa-solid fa-cloud"></i> <span>Vercel</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              </li>
+              <li class="skill-tile">
+                <div class="skill-tile-top"><i class="fa-solid fa-cloud-arrow-up"></i> <span>Netlify</span></div>
+                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Education</h1>
+          <h6>Academic background</h6>
+        </div>
+        <div class="education-content">
+          <div class="education-item" data-aos="fade-right" data-aos-delay="300">
+            <div class="education-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="education-details">
+              <h1>BSc in Computer Science &amp; Engineering (CSE)</h1>
+              <h6>Green University of Bangladesh &middot; 2022 &ndash; Present</h6>
+            </div>
+          </div>
+
+          <div class="certifications" data-aos="fade-left" data-aos-delay="600">
+            <h3>Certifications</h3>
+            <ul class="certification-list">
+              <li class="certification-item">
+                <i class="fa-solid fa-certificate"></i>
+                <div>
+                  <h4>Shopify Development Certificate</h4>
+                  <p>Shikhbe Shobai</p>
+                </div>
+              </li>
+              <li class="certification-item">
+                <i class="fa-solid fa-certificate"></i>
+                <div>
+                  <h4>MERN Stack Course</h4>
+                  <p>Programming Hero</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
       <div class="container">
@@ -193,7 +432,67 @@
           <h6>View some of my recent works</h6>
         </div>
 
-        <!-- 01. SunCart -->
+        <!-- 01. MealMind AI -->
+        <div class="portfolio-item">
+          <div class="portfolio-img" data-aos="fade-right" data-aos-delay="300">
+            <div class="browser-mockup">
+              <div class="browser-bar">
+                <div class="browser-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="browser-url">mealmind-eta.vercel.app</div>
+              </div>
+              <div class="browser-content">
+                <img
+                  src="images/mealmind.png"
+                  alt="MealMind AI recipe platform screenshot"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-des" data-aos="fade-left" data-aos-delay="600">
+            <span class="project-number">01</span>
+            <h6>
+              NEXT.JS 16 · REACT 19 · TYPESCRIPT · TANSTACK QUERY · BETTER AUTH ·
+              EXPRESS.JS · MONGODB · GROQ (LLAMA 3.3)
+            </h6>
+            <h1>MealMind AI — AI-Assisted Recipe Platform</h1>
+            <p>
+              An AI-assisted recipe platform where users explore a curated
+              recipe library with advanced search and filters, generate
+              brand-new recipes from ingredients they already have using AI,
+              chat with a recipe-aware assistant, and publish, rate, and
+              review their own recipes. Frontend on Next.js 16/React 19,
+              backend on Express + MongoDB, with Groq's Llama 3.3 70B powering
+              the AI features.
+            </p>
+            <div class="portfolio-buttons">
+              <a
+                href="https://mealmind-eta.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/Morshedul-developer/mealmind"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-outline"
+              >
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a href="project-mealmind.html" class="cta-outline view-more">
+                View More <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02. SunCart -->
         <div class="portfolio-item">
           <div class="portfolio-img" data-aos="fade-right" data-aos-delay="300">
             <div class="browser-mockup">
@@ -208,14 +507,14 @@
               <div class="browser-content">
                 <img
                   src="images/sunCart.png"
-                  alt="SunCart E-Commerce Project"
+                  alt="SunCart e-commerce web app screenshot"
                 />
               </div>
             </div>
           </div>
 
           <div class="portfolio-des" data-aos="fade-left" data-aos-delay="600">
-            <span class="project-number">01</span>
+            <span class="project-number">02</span>
             <h6>NEXT.JS 16 · REACT 19 · HEROUI V3 · BETTER AUTH · MONGODB</h6>
             <h1>SunCart — Summer E-Commerce Web App</h1>
             <p>
@@ -229,68 +528,20 @@
               <a
                 href="https://suncart-inky.vercel.app/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="cta"
                 >Live Demo</a
               >
               <a
                 href="https://github.com/Morshedul-developer/suncart"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="cta-outline"
               >
                 <i class="fa-brands fa-github"></i> GitHub
               </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 02. Wanderlust -->
-        <div class="portfolio-item">
-          <div class="portfolio-img" data-aos="fade-right" data-aos-delay="300">
-            <div class="browser-mockup">
-              <div class="browser-bar">
-                <div class="browser-dots">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="browser-url">wanderlust-ruby-pi.vercel.app</div>
-              </div>
-              <div class="browser-content">
-                <img
-                  src="images/wanderlast.png"
-                  alt="Wanderlust Travel App Project"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-des" data-aos="fade-left" data-aos-delay="600">
-            <span class="project-number">02</span>
-            <h6>
-              NEXT.JS 16 · REACT 19 · HEROUI V3 · BETTER AUTH · EXPRESS.JS ·
-              MONGODB
-            </h6>
-            <h1>Wanderlust — Travel Discovery & Booking App</h1>
-            <p>
-              A full-stack travel discovery platform with a decoupled
-              architecture — Next.js 16 frontend paired with an Express.js v5
-              REST API backend. Users can explore and add destinations, manage
-              bookings, and authenticate securely via Better Auth. Built with
-              HeroUI v3 and Tailwind CSS v4 for a clean, responsive UI.
-            </p>
-            <div class="portfolio-buttons">
-              <a
-                href="https://wanderlust-ruby-pi.vercel.app/"
-                target="_blank"
-                class="cta"
-                >Live Demo</a
-              >
-              <a
-                href="https://github.com/Morshedul-developer/wanderlust"
-                target="_blank"
-                class="cta-outline"
-              >
-                <i class="fa-brands fa-github"></i> GitHub
+              <a href="project-suncart.html" class="cta-outline view-more">
+                View More <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
@@ -309,7 +560,10 @@
                 <div class="browser-url">keen-keeper-xi-five.vercel.app</div>
               </div>
               <div class="browser-content">
-                <img src="images/keen-keeper.png" alt="KeenKeeper Project" />
+                <img
+                  src="images/keen-keeper.png"
+                  alt="KeenKeeper relationship management app screenshot"
+                />
               </div>
             </div>
           </div>
@@ -333,62 +587,20 @@
               <a
                 href="https://keen-keeper-xi-five.vercel.app/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="cta"
                 >Live Demo</a
               >
               <a
                 href="https://github.com/Morshedul-developer/keen-keeper"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="cta-outline"
               >
                 <i class="fa-brands fa-github"></i> GitHub
               </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 04. AI Model Hub -->
-        <div class="portfolio-item">
-          <div class="portfolio-img" data-aos="fade-right" data-aos-delay="300">
-            <div class="browser-mockup">
-              <div class="browser-bar">
-                <div class="browser-dots">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="browser-url">ai-model-hub-52.netlify.app</div>
-              </div>
-              <div class="browser-content">
-                <img src="images/ai-model-hub.png" alt="AI Model Hub Project" />
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-des" data-aos="fade-left" data-aos-delay="600">
-            <span class="project-number">04</span>
-            <h6>REACT 19 · TAILWIND CSS V4 · DAISYUI V5 · VITE</h6>
-            <h1>AI Model Hub — AI Model Browsing & Cart App</h1>
-            <p>
-              A modern single-page application for browsing and managing AI
-              models, built with React 19 and Vite. Features async data fetching
-              with React Suspense, a gradient-styled tab system, real-time cart
-              management with live item count, and toast notifications — all
-              styled with Tailwind CSS and DaisyUI.
-            </p>
-            <div class="portfolio-buttons">
-              <a
-                href="https://ai-model-hub-52.netlify.app/"
-                target="_blank"
-                class="cta"
-                >Live Demo</a
-              >
-              <a
-                href="https://github.com/Morshedul-developer/ai-model-hub"
-                target="_blank"
-                class="cta-outline"
-              >
-                <i class="fa-brands fa-github"></i> GitHub
+              <a href="project-keenkeeper.html" class="cta-outline view-more">
+                View More <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
@@ -396,8 +608,8 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="experience" id="experience">
+    <!-- Achievements Section -->
+    <section class="experience" id="achievements">
       <div class="container">
         <div class="section-heading">
           <h1>Achievements</h1>
@@ -446,6 +658,25 @@
         <div class="section-heading">
           <h1>Contact</h1>
           <h6>Let's work together</h6>
+        </div>
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="150">
+          <a href="mailto:nijhumkhandoker9@gmail.com" class="contact-info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>nijhumkhandoker9@gmail.com</span>
+          </a>
+          <a href="tel:+8801792988812" class="contact-info-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+880 1792-988812</span>
+          </a>
+          <a
+            href="https://wa.me/8801792988812"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-info-item"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
         </div>
         <form action="" data-aos="fade-up" data-aos-delay="300">
           <label for="name">Name:</label>
@@ -503,8 +734,10 @@
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#experience">Achievements</a></li>
+            <li><a href="#achievements">Achievements</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -515,34 +748,55 @@
             <i class="fa-solid fa-envelope"></i>
             nijhumkhandoker9@gmail.com
           </a>
+          <a href="tel:+8801792988812">
+            <i class="fa-solid fa-phone"></i>
+            +880 1792-988812
+          </a>
           <div class="footer-socials">
             <a
               href="https://github.com/Morshedul-developer"
               target="_blank"
+              rel="noopener noreferrer"
               title="GitHub"
+              aria-label="GitHub"
             >
               <i class="fa-brands fa-github"></i>
             </a>
             <a
               href="https://www.linkedin.com/in/morshedulkhaer/"
               target="_blank"
+              rel="noopener noreferrer"
               title="LinkedIn"
+              aria-label="LinkedIn"
             >
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
             <a
               href="https://www.facebook.com/nijhum.khandoker"
               target="_blank"
+              rel="noopener noreferrer"
               title="Facebook"
+              aria-label="Facebook"
             >
               <i class="fa-brands fa-facebook-f"></i>
             </a>
             <a
               href="https://x.com/Morshedul2152"
               target="_blank"
+              rel="noopener noreferrer"
               title="Twitter/X"
+              aria-label="Twitter/X"
             >
               <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a
+              href="https://wa.me/8801792988812"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="WhatsApp"
+              aria-label="WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
             </a>
           </div>
         </div>
