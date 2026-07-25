@@ -1,4 +1,16 @@
+(function () {
+    var stored = localStorage.getItem('theme');
+    var initial = stored ? stored : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', initial);
+})();
+
 $(document).ready(function () {
+    $('.theme-toggle').on('click', function() {
+        var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+    });
+
     $('.menu-toggler').on('click', function() {
         $(this).toggleClass('open');
         $('.top-nav').toggleClass('open');
@@ -31,6 +43,7 @@ $(document).ready(function () {
 
     var $siteNav = $('.site-nav');
     var $siteNavLinks = $('.site-nav-link');
+    var $mobileNavLinks = $('.top-nav .nav-link[href^="#"]');
     var $sections = $('section[id]');
 
     function updateSiteNav() {
@@ -52,14 +65,20 @@ $(document).ready(function () {
         });
 
         $siteNavLinks.removeClass('active');
+        $mobileNavLinks.removeClass('active');
         if (currentId) {
             $siteNavLinks.filter('[href="#' + currentId + '"]').addClass('active');
+            $mobileNavLinks.filter('[href="#' + currentId + '"]').addClass('active');
         }
     }
 
     $(window).on('scroll', updateSiteNav);
     updateSiteNav();
 
+    // Reduced-motion users still get every element revealed (via the CSS
+    // transition-duration override in main.css) — AOS itself must stay
+    // enabled, since AOS's `disable` option skips adding the reveal class
+    // entirely and elements would stay permanently hidden at opacity:0.
     AOS.init({
         easing: 'ease',
         duration: 1800,

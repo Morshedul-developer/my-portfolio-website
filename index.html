@@ -2,6 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var t = localStorage.getItem('theme');
+        if (!t) { t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'; }
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Morshedul Khaer | Full-Stack Web Developer</title>
     <meta
@@ -25,6 +32,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="stylesheet"
@@ -37,15 +50,21 @@
     <nav class="site-nav" id="site-nav">
       <div class="site-nav-inner">
         <a href="index.html" class="site-nav-brand">Morshedul Khaer</a>
-        <ul class="site-nav-list">
-          <li><a href="#about" class="site-nav-link">About</a></li>
-          <li><a href="#services" class="site-nav-link">Services</a></li>
-          <li><a href="#skills" class="site-nav-link">Skills</a></li>
-          <li><a href="#education" class="site-nav-link">Education</a></li>
-          <li><a href="#portfolio" class="site-nav-link">Portfolio</a></li>
-          <li><a href="#achievements" class="site-nav-link">Achievements</a></li>
-          <li><a href="#contact" class="site-nav-link">Contact</a></li>
-        </ul>
+        <div class="site-nav-right">
+          <ul class="site-nav-list">
+            <li><a href="#about" class="site-nav-link">About</a></li>
+            <li><a href="#services" class="site-nav-link">Services</a></li>
+            <li><a href="#skills" class="site-nav-link">Skills</a></li>
+            <li><a href="#education" class="site-nav-link">Education</a></li>
+            <li><a href="#portfolio" class="site-nav-link">Portfolio</a></li>
+            <li><a href="#achievements" class="site-nav-link">Achievements</a></li>
+            <li><a href="#contact" class="site-nav-link">Contact</a></li>
+          </ul>
+          <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun"></i>
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -56,6 +75,10 @@
         <div class="bar"></div>
         <div class="bar half end"></div>
       </div>
+      <button class="theme-toggle" id="theme-toggle-mobile" type="button" aria-label="Toggle light and dark theme">
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun"></i>
+      </button>
       <nav class="top-nav">
         <ul class="nav-list">
           <li>
@@ -105,14 +128,13 @@
           <div class="hero-cta">
             <a href="#portfolio" class="hero-btn-primary">View My Work</a>
             <a
-              href="#"
+              href="Morshedul_Khaer_Nijhum_CV.pdf"
               class="hero-btn-secondary"
-              aria-disabled="true"
-              title="Resume coming soon"
-              onclick="return false;"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
             >
               <i class="fa-solid fa-file-arrow-down"></i> Resume
-              <span class="resume-btn-badge">Coming Soon</span>
             </a>
           </div>
         </div>
@@ -241,14 +263,16 @@
 
     <!-- Services Section -->
     <section class="services" id="services">
+      <div class="section-blob section-blob--violet section-blob--top-left"></div>
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-number">01</span>
           <h1>Services</h1>
           <h6>What I can do for you</h6>
         </div>
-        <div class="my-skills">
-          <div class="skills" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-container">
+        <div class="services-grid">
+          <div class="service-card service-card--featured" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
               <i class="fa-solid fa-rocket"></i>
             </div>
             <h1>Next.js Web Application Development</h1>
@@ -257,9 +281,15 @@
               leveraging modern rendering techniques for performance and
               scalability.
             </p>
+            <ul class="service-tags">
+              <li>Next.js</li>
+              <li>React</li>
+              <li>SSR / SSG</li>
+              <li>Performance</li>
+            </ul>
           </div>
-          <div class="skills" data-aos="fade-up" data-aos-delay="450">
-            <div class="icon-container">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
               <i class="fa-solid fa-server"></i>
             </div>
             <h1>Full-Stack & API Development</h1>
@@ -269,8 +299,8 @@
               using Better Auth.
             </p>
           </div>
-          <div class="skills" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon-container">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
               <i class="fa-solid fa-layer-group"></i>
             </div>
             <h1>Interactive UI Development</h1>
@@ -279,18 +309,18 @@
               focused on clean code, reusability, and smooth user experience.
             </p>
           </div>
-          <div class="skills" data-aos="fade-up" data-aos-delay="750">
-            <div class="icon-container">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">
               <i class="fa-solid fa-display"></i>
             </div>
-            <h1>Responsive Web<br />Design</h1>
+            <h1>Responsive Web Design</h1>
             <p>
               Crafting pixel-perfect, mobile-first interfaces using HTML, CSS,
               and Tailwind CSS that look great on every screen size.
             </p>
           </div>
-          <div class="skills" data-aos="fade-up" data-aos-delay="900">
-            <div class="icon-container">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-icon">
               <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
             <h1>UI Audit & Frontend Improvement</h1>
@@ -306,96 +336,89 @@
 
     <!-- Skills Section -->
     <section class="tech-skills" id="skills">
+      <div class="section-blob section-blob--cyan section-blob--bottom-right"></div>
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-number">02</span>
           <h1>Skills</h1>
           <h6>Technologies I work with</h6>
         </div>
         <div class="skill-groups">
-          <div class="skill-group" data-aos="fade-up" data-aos-delay="300">
-            <h3><i class="fa-solid fa-laptop-code"></i> Frontend</h3>
+          <div class="skill-group skill-group--frontend" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-group-header">
+              <span class="skill-group-icon"><i class="fa-solid fa-laptop-code"></i></span>
+              <h3>Frontend</h3>
+            </div>
             <ul class="skill-tile-grid">
               <li class="skill-tile skill-tile--primary">
-                <div class="skill-tile-top"><i class="fa-brands fa-react"></i> <span>React</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+                <i class="fa-brands fa-react"></i> <span>React</span>
               </li>
               <li class="skill-tile skill-tile--primary">
-                <div class="skill-tile-top"><i class="fa-solid fa-n"></i> <span>Next.js</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+                <i class="fa-solid fa-n"></i> <span>Next.js</span>
               </li>
               <li class="skill-tile skill-tile--primary">
-                <div class="skill-tile-top"><i class="fa-solid fa-wind"></i> <span>Tailwind CSS</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+                <i class="fa-brands fa-js"></i> <span>JavaScript</span>
+              </li>
+              <li class="skill-tile skill-tile--primary">
+                <i class="fa-solid fa-wind"></i> <span>Tailwind CSS</span>
               </li>
               <li class="skill-tile">
-                <div class="skill-tile-top"><i class="fa-brands fa-html5"></i> <span>HTML5</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+                <i class="fa-brands fa-html5"></i> <span>HTML5</span>
               </li>
               <li class="skill-tile">
-                <div class="skill-tile-top"><i class="fa-brands fa-css3-alt"></i> <span>CSS3</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+                <i class="fa-brands fa-css3-alt"></i> <span>CSS3</span>
               </li>
               <li class="skill-tile">
-                <div class="skill-tile-top"><i class="fa-brands fa-js"></i> <span>JavaScript</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+                <i class="fa-solid fa-code"></i> <span>TypeScript</span>
               </li>
               <li class="skill-tile">
-                <div class="skill-tile-top"><i class="fa-solid fa-code"></i> <span>TypeScript</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span></div>
-              </li>
-              <li class="skill-tile">
-                <div class="skill-tile-top"><i class="fa-solid fa-palette"></i> <span>HeroUI / DaisyUI</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+                <i class="fa-solid fa-palette"></i> <span>HeroUI / DaisyUI</span>
               </li>
             </ul>
           </div>
-          <div class="skill-group" data-aos="fade-up" data-aos-delay="450">
-            <h3><i class="fa-solid fa-database"></i> Backend</h3>
+          <div class="skill-group skill-group--backend" data-aos="fade-up" data-aos-delay="450">
+            <div class="skill-group-header">
+              <span class="skill-group-icon"><i class="fa-solid fa-database"></i></span>
+              <h3>Backend</h3>
+            </div>
             <ul class="skill-tile-grid">
               <li class="skill-tile skill-tile--primary">
-                <div class="skill-tile-top"><i class="fa-brands fa-node-js"></i> <span>Node.js</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+                <i class="fa-brands fa-node-js"></i> <span>Node.js</span>
               </li>
               <li class="skill-tile skill-tile--primary">
-                <div class="skill-tile-top"><i class="fa-solid fa-server"></i> <span>Express.js</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+                <i class="fa-solid fa-leaf"></i> <span>MongoDB</span>
               </li>
               <li class="skill-tile">
-                <div class="skill-tile-top"><i class="fa-solid fa-leaf"></i> <span>MongoDB</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+                <i class="fa-solid fa-server"></i> <span>Express.js</span>
               </li>
               <li class="skill-tile">
-                <div class="skill-tile-top"><i class="fa-solid fa-lock"></i> <span>Better Auth</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+                <i class="fa-solid fa-lock"></i> <span>Better Auth</span>
               </li>
-              <li class="skill-tile skill-tile--primary">
-                <div class="skill-tile-top"><i class="fa-solid fa-diagram-project"></i> <span>REST APIs</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+              <li class="skill-tile">
+                <i class="fa-solid fa-diagram-project"></i> <span>REST APIs</span>
               </li>
             </ul>
           </div>
-          <div class="skill-group" data-aos="fade-up" data-aos-delay="600">
-            <h3><i class="fa-solid fa-toolbox"></i> Tools</h3>
+          <div class="skill-group skill-group--tools" data-aos="fade-up" data-aos-delay="600">
+            <div class="skill-group-header">
+              <span class="skill-group-icon"><i class="fa-solid fa-toolbox"></i></span>
+              <h3>Tools</h3>
+            </div>
             <ul class="skill-tile-grid">
               <li class="skill-tile">
-                <div class="skill-tile-top"><i class="fa-brands fa-git-alt"></i> <span>Git</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+                <i class="fa-brands fa-git-alt"></i> <span>Git</span>
               </li>
               <li class="skill-tile">
-                <div class="skill-tile-top"><i class="fa-brands fa-github"></i> <span>GitHub</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+                <i class="fa-brands fa-github"></i> <span>GitHub</span>
               </li>
               <li class="skill-tile">
-                <div class="skill-tile-top"><i class="fa-solid fa-bolt"></i> <span>Vite</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+                <i class="fa-solid fa-bolt"></i> <span>Vite</span>
               </li>
               <li class="skill-tile">
-                <div class="skill-tile-top"><i class="fa-solid fa-cloud"></i> <span>Vercel</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+                <i class="fa-solid fa-cloud"></i> <span>Vercel</span>
               </li>
               <li class="skill-tile">
-                <div class="skill-tile-top"><i class="fa-solid fa-cloud-arrow-up"></i> <span>Netlify</span></div>
-                <div class="skill-dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+                <i class="fa-solid fa-cloud-arrow-up"></i> <span>Netlify</span>
               </li>
             </ul>
           </div>
@@ -406,7 +429,8 @@
     <!-- Education Section -->
     <section class="education" id="education">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-number">03</span>
           <h1>Education</h1>
           <h6>Academic background</h6>
         </div>
@@ -446,8 +470,10 @@
 
     <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
+      <div class="section-blob section-blob--violet section-blob--bottom-right"></div>
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-number">04</span>
           <h1>Portfolio</h1>
           <h6>View some of my recent works</h6>
         </div>
@@ -631,7 +657,8 @@
     <!-- Achievements Section -->
     <section class="experience" id="achievements">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-number">05</span>
           <h1>Achievements</h1>
           <h6>What I've accomplished so far</h6>
         </div>
@@ -674,8 +701,10 @@
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
+      <div class="section-blob section-blob--cyan section-blob--top-left"></div>
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-aos="fade-up">
+          <span class="section-number">06</span>
           <h1>Contact</h1>
           <h6>Let's work together</h6>
         </div>
@@ -825,7 +854,7 @@
       <div class="footer-bottom">
         <p>&copy; 2026 Morshedul Khaer. All rights reserved.</p>
         <div class="up" id="up">
-          <i class="fas fa-chevron-up"></i>
+          <i class="fa-solid fa-chevron-up"></i>
         </div>
       </div>
     </footer>
